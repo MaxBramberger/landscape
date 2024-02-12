@@ -2,9 +2,9 @@
 
 ## Setup
 
-Install anaconda
+Install [anaconda](https://www.anaconda.com/download).
 
-Set up the environment specified in the environment.yaml.
+Set up the environment specified in the environment.yaml using ``conda env create -n environment.yaml``.
 
 Activate the environment using ``conda activate landscape``.
 
