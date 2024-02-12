@@ -1,0 +1,4 @@
+name: landscape
+dependencies:
+  - python >= 3.10.9, < 4
+  - pip >= 22.3.1, < 23

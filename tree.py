@@ -1,6 +1,9 @@
 from enum import Enum
 
+from PIL import Image
+
 from landscape_element import LandscapeElement
+from plotting import insert_image
 
 
 class FruitType(Enum):
@@ -9,6 +12,7 @@ class FruitType(Enum):
 
 
 class Tree(LandscapeElement):
+    img = "img/tree.jpg"
 
     def __init__(self, n_fruit: int) -> None:
         self._has_leaves = True
@@ -20,6 +24,9 @@ class Tree(LandscapeElement):
 
     def loose_leaves(self) -> None:
         self._has_leaves = False
+
+    def draw(self, background: Image, position: tuple[int, int]) -> None:
+        insert_image(background,self.img, position, self.img_size)
 
 
 class AppleTree(Tree):
